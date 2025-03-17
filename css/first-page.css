@@ -1,0 +1,339 @@
+#first-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+}
+
+/* Left Side */
+#left-container-fp {
+    width: 30%;
+    height: 100%;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--bg-color);
+}
+
+.photo-cv {
+    width: 40%;
+    margin-top: 5%;
+    border: 6px solid var(--color-secondary);
+    border-radius: 5px;
+ }
+
+ .fullname {
+    font-size: 2.5rem;
+    margin-top: 5%;
+ }
+
+ .job {
+    font-size: 1.2rem;
+    margin-top: 1%;
+ }
+
+ .logo-container {
+    margin-top: 5%;
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+ }
+
+ .logo {
+    height: 100%;
+    width: 9%;
+    background: var(--color-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: scale 0.3s ease-in-out;
+ }
+
+ .logo:hover {
+    scale: 1.2;
+ }
+
+ .logo img {
+    width: 55%;
+ }
+
+ .aboutme {
+    font-size: 1.3rem;
+    margin-top: 4%;
+    font-weight: 500;
+ }
+
+ .aboutme-text {
+    margin-top: 3%;
+    text-align: center;
+    font-weight: 200;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    padding-left: 5%;
+    padding-right: 5%;
+ }
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 16%;
+}
+
+.contact-button {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    text-decoration: none;
+    width: 30%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: scale 0.3s ease-in-out;
+}
+
+.contact-button:hover {
+    scale: 0.9;
+    cursor: pointer;
+}
+
+/* Right Side */
+#right-container-fp {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+}
+
+.rc-left {
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experiences-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.experiences-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.experiences {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.experiences-infos {
+    width: 50%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+
+.experiences-infos-date {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.experiences-infos-company {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--color-secondary);
+}
+
+.experiences-infos-address {
+    font-weight: 200;
+}
+
+.line-container {
+    position: relative;
+    height: 63%;
+    width: 20px; /* Largeur de la ligne */
+    display: flex;
+    justify-content: center;
+}
+
+.animated-line {
+    position: absolute;
+    top: 0;
+    width: 30%; /* Pour que la ligne remplisse la largeur de son conteneur */
+    height: 0;
+    background-color: var(--color-primary);
+    border-radius: 30px;
+}
+
+.point {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-primary); /* Couleur des points */
+    color: var(--bg-color);
+    font-size: 1.7rem;
+    font-weight: 900;
+    border-radius: 50%; /* Rendre les points ronds */
+    left: 50%; /* Positionner le centre du point au milieu de la ligne */
+    transform: translateX(-50%); /* Corriger pour bien centrer */
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.point:hover {
+    cursor: pointer;
+    transform: translateX(-40%); /* Corriger pour bien centrer */
+    scale: 1.2;
+}
+
+.point1 {
+    top: 0%;
+}
+
+.point2 {
+    top: 31%;
+}
+
+.point3 {
+    top: 64%;
+}
+
+.point4 {
+    top: 95%;
+}
+
+.reveal-line {
+    animation: line-animation 2.5s ease-in-out forwards;
+}
+
+.reveal-point {
+    animation: opacity-animation 1s ease-out forwards;
+}
+
+
+.rc-right {
+    width: 60%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dev-logo {
+    width: 50%;
+    height: 50%;
+    margin-top: 5%;
+}
+
+.experience-description {
+    position: absolute;
+    top: 0;
+    width: 40%;
+    height: 50%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-primary);
+    color: var(--bg-color);
+    font-weight: 900;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+}
+
+.close-button:hover {
+    color: var(--color-secondary);
+    scale: 1.2;
+}
+
+.experience-description-date {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.experience-description-company {
+    font-size: 1.6rem;
+    color: var(--color-secondary);
+    font-weight: 800;    
+}
+
+.experience-description-address {
+    font-weight: 200;
+}
+
+.experience-description-text {
+    font-weight: 200;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+}
+
+.others-informations {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.others-informations-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.others-informations ul {
+    line-height: 30px;
+}
+
+@keyframes line-animation {
+    from { height: 0%; }
+    to { height: 100%; }
+}
+
+@keyframes opacity-animation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
